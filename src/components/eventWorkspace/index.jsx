@@ -39,7 +39,10 @@ const getWeekendRange = () => {
     }
 
     const end = new Date(start);
-    end.setDate(end.getDate() + (start.getDay() === 5 ? 2 : start.getDay() === 6 ? 1 : 0));
+    end.setDate(
+        end.getDate() +
+            (start.getDay() === 5 ? 2 : start.getDay() === 6 ? 1 : 0),
+    );
 
     return { start: getDateKey(start), end: getDateKey(end) };
 };
@@ -97,8 +100,7 @@ const EventWorkspace = () => {
                 (dateRange === "week" &&
                     event.date >= today &&
                     event.date <= weekEnd);
-            const matchesSaved =
-                !savedOnly || savedEventIds.includes(event.id);
+            const matchesSaved = !savedOnly || savedEventIds.includes(event.id);
 
             return (
                 matchesSearch &&
@@ -182,8 +184,6 @@ const EventWorkspace = () => {
         scrollToEvents();
     };
 
-
-
     return (
         <div className={styles.workspace}>
             <DiscoverHero
@@ -222,7 +222,10 @@ const EventWorkspace = () => {
                 onSelect={selectNeighborhood}
             />
 
-            <p className={styles.storageNote} role={storageError ? "status" : undefined}>
+            <p
+                className={styles.storageNote}
+                role={storageError ? "status" : undefined}
+            >
                 <FiHardDrive aria-hidden="true" />
                 {storageError
                     ? "Browser storage is unavailable. Changes will not stay after this page closes."

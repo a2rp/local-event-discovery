@@ -47,9 +47,15 @@ const SiteHeader = () => {
                     id="site-navigation"
                     aria-label="Main navigation"
                 >
-                    <a href="#discover" onClick={closeMenu}>Discover</a>
-                    <a href="#events" onClick={closeMenu}>Events</a>
-                    <a href="#neighborhoods" onClick={closeMenu}>Neighborhoods</a>
+                    <a href="#discover" onClick={closeMenu}>
+                        Discover
+                    </a>
+                    <a href="#events" onClick={closeMenu}>
+                        Events
+                    </a>
+                    <a href="#neighborhoods" onClick={closeMenu}>
+                        Neighborhoods
+                    </a>
                 </nav>
                 <div className={styles.actions}>
                     <a
@@ -64,12 +70,20 @@ const SiteHeader = () => {
                     <button
                         className={styles.menuButton}
                         type="button"
-                        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+                        aria-label={
+                            menuOpen
+                                ? "Close navigation menu"
+                                : "Open navigation menu"
+                        }
                         aria-expanded={menuOpen}
                         aria-controls="site-navigation"
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
-                        {menuOpen ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
+                        {menuOpen ? (
+                            <FiX aria-hidden="true" />
+                        ) : (
+                            <FiMenu aria-hidden="true" />
+                        )}
                     </button>
                 </div>
             </div>

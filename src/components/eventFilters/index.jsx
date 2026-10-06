@@ -1,5 +1,9 @@
 ﻿import { FiBookmark, FiCheck, FiX } from "react-icons/fi";
-import { categoryOptions, dateOptions, neighborhoodOptions } from "../../data/eventOptions.js";
+import {
+    categoryOptions,
+    dateOptions,
+    neighborhoodOptions,
+} from "../../data/eventOptions.js";
 import styles from "./styles.module.css";
 
 const EventFilters = ({
@@ -70,7 +74,9 @@ const EventFilters = ({
 
                     return (
                         <button
-                            className={active ? styles.categoryActive : styles.category}
+                            className={
+                                active ? styles.categoryActive : styles.category
+                            }
                             type="button"
                             key={option}
                             aria-pressed={active}
@@ -85,7 +91,11 @@ const EventFilters = ({
         </div>
 
         {hasFilters ? (
-            <button className={styles.clearButton} type="button" onClick={onClear}>
+            <button
+                className={styles.clearButton}
+                type="button"
+                onClick={onClear}
+            >
                 <FiX aria-hidden="true" />
                 Clear filters
             </button>

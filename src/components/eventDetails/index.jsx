@@ -103,7 +103,9 @@ const EventDetails = ({
                     <div className={styles.titleRow}>
                         <div>
                             <h2 id="event-title">{event.title}</h2>
-                            <p className={styles.host}>Hosted by {event.host}</p>
+                            <p className={styles.host}>
+                                Hosted by {event.host}
+                            </p>
                         </div>
                         <span className={styles.price}>{event.price}</span>
                     </div>
@@ -123,11 +125,16 @@ const EventDetails = ({
                         </div>
                         <div>
                             <FiMapPin aria-hidden="true" />
-                            <span>{event.venue}, {event.neighborhood}</span>
+                            <span>
+                                {event.venue}, {event.neighborhood}
+                            </span>
                         </div>
                         <div>
                             <FiUsers aria-hidden="true" />
-                            <span>{event.goingCount + Number(isInterested)} people are interested</span>
+                            <span>
+                                {event.goingCount + Number(isInterested)} people
+                                are interested
+                            </span>
                         </div>
                     </div>
 
@@ -139,7 +146,9 @@ const EventDetails = ({
 
                     <div className={styles.actions}>
                         <button
-                            className={isSaved ? styles.savedButton : styles.saveButton}
+                            className={
+                                isSaved ? styles.savedButton : styles.saveButton
+                            }
                             type="button"
                             aria-pressed={isSaved}
                             onClick={() => onSave(event.id)}
@@ -153,7 +162,9 @@ const EventDetails = ({
                             aria-pressed={isInterested}
                             onClick={() => onInterested(event.id)}
                         >
-                            {isInterested ? "You're interested" : "I'm interested"}
+                            {isInterested
+                                ? "You're interested"
+                                : "I'm interested"}
                         </button>
                     </div>
                 </div>

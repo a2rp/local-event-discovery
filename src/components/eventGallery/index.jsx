@@ -10,7 +10,11 @@ const EventGallery = ({
     onOpen,
     onClear,
 }) => (
-    <section className={styles.gallery} id="events" aria-labelledby="events-title">
+    <section
+        className={styles.gallery}
+        id="events"
+        aria-labelledby="events-title"
+    >
         <div className={styles.heading}>
             <div>
                 <p>Events around Portland</p>

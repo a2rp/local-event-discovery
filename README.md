@@ -44,20 +44,20 @@ The events are sample listings included with the app. Marking interest is a pers
 
 Use Node.js and npm, then run these commands from the project folder:
 
-~~~sh
+```sh
 npm install
 npm run dev
-~~~
+```
 
 Vite prints the local development address in the terminal. Open that address in a browser.
 
 ## Code checks and preview
 
-~~~sh
+```sh
 npm run lint
 npm run build
 npm run preview
-~~~
+```
 
 ESLint checks the project source. The production build is written to dist, and npm run preview serves that build locally.
 
@@ -65,9 +65,9 @@ ESLint checks the project source. The production build is written to dist, and n
 
 The project deploys to GitHub Pages from the gh-pages branch. The npm command builds the site before publishing the contents of dist:
 
-~~~sh
+```sh
 npm run deploy
-~~~
+```
 
 **Website:** [https://a2rp.github.io/local-event-discovery/](https://a2rp.github.io/local-event-discovery/)
 

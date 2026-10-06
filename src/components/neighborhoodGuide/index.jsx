@@ -44,7 +44,9 @@ const NeighborhoodGuide = ({
 
                     return (
                         <button
-                            className={selected ? styles.areaActive : styles.area}
+                            className={
+                                selected ? styles.areaActive : styles.area
+                            }
                             type="button"
                             key={neighborhood}
                             aria-pressed={selected}
@@ -62,7 +64,10 @@ const NeighborhoodGuide = ({
                             <span className={styles.description}>
                                 {neighborhoodDescriptions[neighborhood]}
                             </span>
-                            <FiArrowRight className={styles.arrow} aria-hidden="true" />
+                            <FiArrowRight
+                                className={styles.arrow}
+                                aria-hidden="true"
+                            />
                         </button>
                     );
                 })}

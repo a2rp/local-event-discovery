@@ -1,4 +1,10 @@
-﻿import { FiArrowUpRight, FiClock, FiHeart, FiMapPin, FiUsers } from "react-icons/fi";
+﻿import {
+    FiArrowUpRight,
+    FiClock,
+    FiHeart,
+    FiMapPin,
+    FiUsers,
+} from "react-icons/fi";
 import styles from "./styles.module.css";
 
 const formatDate = (dateValue) => {
@@ -6,7 +12,9 @@ const formatDate = (dateValue) => {
 
     return {
         day: date.toLocaleDateString("en-US", { weekday: "short" }),
-        month: date.toLocaleDateString("en-US", { month: "short" }).toUpperCase(),
+        month: date
+            .toLocaleDateString("en-US", { month: "short" })
+            .toUpperCase(),
         number: date.getDate(),
     };
 };
@@ -52,9 +60,15 @@ const EventCard = ({ event, isSaved, isInterested, onSave, onOpen }) => {
                     {event.neighborhood} · {event.venue}
                 </p>
                 <div className={styles.cardFooter}>
-                    <span className={isInterested ? styles.interested : styles.going}>
+                    <span
+                        className={
+                            isInterested ? styles.interested : styles.going
+                        }
+                    >
                         <FiUsers aria-hidden="true" />
-                        {isInterested ? "You're interested" : event.goingCount + " going"}
+                        {isInterested
+                            ? "You're interested"
+                            : event.goingCount + " going"}
                     </span>
                     <button
                         className={styles.detailsButton}

@@ -1,6 +1,6 @@
 {
-  "name": "local-event-discovery",
-  "private": true,
+    "name": "local-event-discovery",
+    "private": true,
     "version": "1.0.0",
     "type": "module",
     "homepage": "https://a2rp.github.io/local-event-discovery",

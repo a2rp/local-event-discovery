@@ -8,7 +8,11 @@ const DiscoverHero = ({ search, onSearchChange, onFindEvents }) => {
     };
 
     return (
-        <section className={styles.hero} id="discover" aria-labelledby="hero-title">
+        <section
+            className={styles.hero}
+            id="discover"
+            aria-labelledby="hero-title"
+        >
             <div className={styles.copy}>
                 <p className={styles.location}>
                     <FiMapPin aria-hidden="true" />
@@ -21,7 +25,11 @@ const DiscoverHero = ({ search, onSearchChange, onFindEvents }) => {
                     Neighborhood markets, tucked-away music, and little plans
                     that turn into great stories.
                 </p>
-                <form className={styles.searchForm} role="search" onSubmit={submitSearch}>
+                <form
+                    className={styles.searchForm}
+                    role="search"
+                    onSubmit={submitSearch}
+                >
                     <label className={styles.searchField}>
                         <FiSearch aria-hidden="true" />
                         <span className={styles.screenReaderOnly}>
@@ -48,7 +56,9 @@ const DiscoverHero = ({ search, onSearchChange, onFindEvents }) => {
             <div className={styles.photoGrid}>
                 <figure className={styles.cityPhoto}>
                     <img
-                        src={import.meta.env.BASE_URL + "images/city-evening.jpg"}
+                        src={
+                            import.meta.env.BASE_URL + "images/city-evening.jpg"
+                        }
                         alt="A city skyline glowing at sunset"
                     />
                     <figcaption>
@@ -58,14 +68,20 @@ const DiscoverHero = ({ search, onSearchChange, onFindEvents }) => {
                 </figure>
                 <figure className={styles.smallPhoto}>
                     <img
-                        src={import.meta.env.BASE_URL + "images/coffee-tasting.jpg"}
+                        src={
+                            import.meta.env.BASE_URL +
+                            "images/coffee-tasting.jpg"
+                        }
                         alt="Coffee being prepared at a tasting bar"
                     />
                     <figcaption>Coffee & conversations</figcaption>
                 </figure>
                 <figure className={styles.smallPhoto}>
                     <img
-                        src={import.meta.env.BASE_URL + "images/farmers-market.jpg"}
+                        src={
+                            import.meta.env.BASE_URL +
+                            "images/farmers-market.jpg"
+                        }
                         alt="Fresh berries ready for a neighborhood market"
                     />
                     <figcaption>Saturday finds</figcaption>
