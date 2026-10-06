@@ -1,0 +1,11 @@
+.appShell {
+    min-height: 100vh;
+    padding: 48px;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+
+    h1 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 52px;
+    }
+}
