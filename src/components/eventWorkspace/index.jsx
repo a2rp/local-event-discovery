@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { FiHardDrive } from "react-icons/fi";
 import { DiscoverHero } from "../discoverHero/index.jsx";
 import { EventDetails } from "../eventDetails/index.jsx";
@@ -57,6 +57,7 @@ const EventWorkspace = () => {
         readStoredIds(interestedEventsKey),
     );
     const [selectedEvent, setSelectedEvent] = useState(null);
+    const closeEventDetails = useCallback(() => setSelectedEvent(null), []);
     const [storageError, setStorageError] = useState(false);
 
     const normalizedSearch = search.trim().toLowerCase();
@@ -235,7 +236,7 @@ const EventWorkspace = () => {
                     isInterested={interestedEventIds.includes(selectedEvent.id)}
                     onSave={toggleSaved}
                     onInterested={toggleInterested}
-                    onClose={() => setSelectedEvent(null)}
+                    onClose={closeEventDetails}
                 />
             ) : null}
         </div>
