@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
     FiCalendar,
     FiClock,
@@ -127,7 +127,7 @@ const EventDetails = ({
                         </div>
                         <div>
                             <FiUsers aria-hidden="true" />
-                            <span>{event.goingCount} people are interested</span>
+                            <span>{event.goingCount + Number(isInterested)} people are interested</span>
                         </div>
                     </div>
 

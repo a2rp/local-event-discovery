@@ -1,4 +1,5 @@
-﻿.neighborhoods {
+.neighborhoods {
+    scroll-margin-top: 94px;
     padding: 27px;
     border: 1px solid #e8cec4;
     border-radius: 15px;

@@ -1,4 +1,4 @@
-﻿import { FiCalendarDays, FiSearch } from "react-icons/fi";
+import { FiCalendar, FiSearch } from "react-icons/fi";
 import { EventCard } from "../eventCard/index.jsx";
 import styles from "./styles.module.css";
 
@@ -17,7 +17,7 @@ const EventGallery = ({
                 <h2 id="events-title">Find something good.</h2>
             </div>
             <span className={styles.resultCount}>
-                <FiCalendarDays aria-hidden="true" />
+                <FiCalendar aria-hidden="true" />
                 {events.length} {events.length === 1 ? "event" : "events"}
             </span>
         </div>

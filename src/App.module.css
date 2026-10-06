@@ -1,11 +1,27 @@
-.appShell {
+﻿.appShell {
     min-height: 100vh;
-    padding: 48px;
     background: var(--color-canvas);
     color: var(--color-ink);
 
-    h1 {
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: 52px;
+    .pageContent {
+        display: grid;
+        width: min(1280px, calc(100% - 48px));
+        gap: 24px;
+        margin: 0 auto;
+        padding: 105px 0 58px;
+    }
+
+    @media (max-width: 760px) {
+        .pageContent {
+            width: calc(100% - 32px);
+            padding-top: 94px;
+            padding-bottom: 44px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .pageContent {
+            width: calc(100% - 24px);
+        }
     }
 }
